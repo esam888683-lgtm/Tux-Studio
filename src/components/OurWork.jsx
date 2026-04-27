@@ -3,7 +3,7 @@ import Title from "./Title";
 import assets from "../assets/assets";
 import { motion } from "framer-motion";
 import halalVideo from '../assets/halal.mp4';
-import arnoldGym from '../assets/arnoldGym.mp4';
+
 const OurWork = () => {
   const workData = [
     {
