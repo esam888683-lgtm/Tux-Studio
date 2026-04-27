@@ -88,6 +88,6 @@ export default assets
 
 export const teamData = [
   { name: 'Osama Esam', title: 'CEO & founder', image: assets.OSama },
-  { name: 'Abdelmonem Ali', title: 'Co-founder', image: assets.men3em },
+  { name: 'Abdelmonem Ali', title: 'CEO & founder', image: assets.men3em },
 
 ]
