@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- ==================== META TAGS ==================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تقييمات وآراء عملاء TUX Studio - شاهد ماذا يقول عملاؤنا عن خدماتنا">
+    <meta name="keywords" content="تقييمات, مراجعات, آراء العملاء, TUX Studio">
+    <meta name="author" content="TUX Studio">
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tuxstudio.com/reviews.html">
+    <meta property="og:title" content="آراء عملاء TUX Studio | مراجعات حقيقية">
+    <meta property="og:description" content="تقييمات حقيقية من عملائنا الكرام">
+
+    <title>آراء العملاء | TUX Studio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- ==================== LOADING SCREEN ==================== -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <svg viewBox="0 0 100 100" class="loading-svg">
+                    <circle cx="50" cy="50" r="45" class="loading-circle loading-circle-bg"/>
+                    <circle cx="50" cy="50" r="45" class="loading-circle loading-circle-progress"/>
+                    <text x="50" y="58" text-anchor="middle" class="loading-text">T</text>
+                </svg>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-bar-fill" id="loadingBarFill"></div>
+            </div>
+            <p class="loading-status" id="loadingStatus">جاري التحميل...</p>
+        </div>
+    </div>
+
+    <!-- ==================== DARK MODE TOGGLE ==================== -->
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="تبديل الوضع الليلي">
+        <i class="fas fa-moon" id="darkModeIcon"></i>
+    </button>
+
+    <!-- ==================== BACK TO TOP ==================== -->
+    <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ==================== WHATSAPP FLOAT ==================== -->
+    <a href="https://wa.me/966501234567" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="./index.html" class="nav-logo">
+                <span class="logo-icon">T</span>
+                <span class="logo-text">TUX<span class="logo-accent"> Studio</span></span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="./index.html#home" class="nav-link">الرئيسية</a></li>
+                <li><a href="./index.html#about" class="nav-link">من نحن</a></li>
+                <li><a href="./index.html#services" class="nav-link">خدماتنا</a></li>
+                <li><a href="./index.html#portfolio" class="nav-link">أعمالنا</a></li>
+                <li><a href="./reviews.html" class="nav-link active">المراجعات</a></li>
+                <li><a href="./index.html#faq" class="nav-link">الأسئلة</a></li>
+                <li><a href="./index.html#contact" class="nav-link nav-cta">تواصل معنا</a></li>
+            </ul>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="فتح القائمة">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-nav-list">
+                <li><a href="./index.html#home" class="mobile-nav-link">الرئيسية</a></li>
+                <li><a href="./index.html#about" class="mobile-nav-link">من نحن</a></li>
+                <li><a href="./index.html#services" class="mobile-nav-link">خدماتنا</a></li>
+                <li><a href="./index.html#portfolio" class="mobile-nav-link">أعمالنا</a></li>
+                <li><a href="./reviews.html" class="mobile-nav-link">المراجعات</a></li>
+                <li><a href="./index.html#statistics" class="mobile-nav-link">إحصائياتنا</a></li>
+                <li><a href="./index.html#faq" class="mobile-nav-link">الأسئلة الشائعة</a></li>
+                <li><a href="./index.html#contact" class="mobile-nav-link mobile-cta">تواصل معنا</a></li>
+            </ul>
+            <div class="mobile-social">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/966501234567" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== REVIEWS HERO ==================== -->
+    <section class="reviews-hero">
+        <div class="container">
+            <div class="reviews-hero-content" data-reveal>
+                <span class="section-tag">المراجعات</span>
+                <h1 class="reviews-hero-title">ماذا يقول <span class="gradient-text">عملاؤنا</span> عنا</h1>
+                <p class="reviews-hero-desc">نفخر بثقة عملائنا ونسعى دائماً لتقديم الأفضل. إليك بعض تجاربهم معنا.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== REVIEWS STATS ==================== -->
+    <section class="reviews-stats">
+        <div class="container">
+            <div class="reviews-stats-grid">
+                <div class="reviews-stat" data-reveal>
+                    <div class="reviews-stat-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="reviews-stat-number">4.9</div>
+                    <div class="reviews-stat-label">متوسط التقييم</div>
+                </div>
+                <div class="reviews-stat" data-reveal>
+                    <div class="reviews-stat-icon"><i class="fas fa-comment-dots"></i></div>
+                    <div class="reviews-stat-number">120+</div>
+                    <div class="reviews-stat-label">تقييم إيجابي</div>
+                </div>
+                <div class="reviews-stat" data-reveal>
+                    <div class="reviews-stat-icon"><i class="fas fa-redo"></i></div>
+                    <div class="reviews-stat-number">85%</div>
+                    <div class="reviews-stat-label">نسبة العملاء المتكررين</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== REVIEWS SLIDER ==================== -->
+    <section class="reviews-slider-section section section-alt">
+        <div class="container">
+            <div class="section-header text-center" data-reveal>
+                <span class="section-tag">تقييمات مميزة</span>
+                <h2 class="section-title">آراء <span class="gradient-text">عملائنا الكرام</span></h2>
+            </div>
+
+            <div class="reviews-slider-wrapper" data-reveal>
+                <button class="slider-btn slider-prev" id="sliderPrev" aria-label="التقييم السابق">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <div class="reviews-slider" id="reviewsSlider">
+                    <!-- Review 1 -->
+                    <div class="review-card active">
+                        <div class="review-card-inner">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="review-text">"تعاملت مع TUX Studio لتطوير موقع شركتي وتجربتي كانت أكثر من رائعة. الفريق محترف جداً، يلتزم بالمواعيد، والجودة فاقت توقعاتي. أنصح بهم بشدة."</p>
+                            <div class="review-author">
+                                <img src="./images/client-1.jpg" alt="أحمد العلي" class="review-avatar">
+                                <div class="review-author-info">
+                                    <h4 class="review-author-name">أحمد خيري</h4>
+                                    <span class="review-author-role">CEO - شركة التقنية المتقدمة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="review-card">
+                        <div class="review-card-inner">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="review-text">"قاموا بتصميم المنيو الإلكتروني لمطعمي والنتيجة كانت مذهلة. العملاء يثنون على سهولة الاستخدام والتصميم الجميل. شكراً لفريق TUX Studio الرائع."</p>
+                            <div class="review-author">
+                                <img src="./images/client-2.jpg" alt="فهد السبيعي" class="review-avatar">
+                                <div class="review-author-info">
+                                    <h4 class="review-author-name">فهد السبيعي</h4>
+                                    <span class="review-author-role">مالك - مطعم الذواقة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="review-card">
+                        <div class="review-card-inner">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="review-text">"أفضل شركة إعلانات تعاملت معها. حملتهم حققت لي نتائج خرافية وزيادة في المبيعات بأكثر من 200%. فريق محترف يفهم السوق السعودي."</p>
+                            <div class="review-author">
+                                <img src="./images/client-3.jpg" alt="نورة القحطاني" class=""review-avatar">
+                                <div class="review-author-info">
+                                    <h4 class="review-author-name">نورة القحطاني</h4>
+                                    <span class="review-author-role">مديرة تسويق - متجر لمسة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="review-card">
+                        <div class="review-card-inner">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="review-text">"كفيلة عن تصميم الهوية البصرية لعلامتي التجارية. الشعار والألوان والخطوط كلها كانت مثالية. أشعر أن علامتي أصبحت احترافية حقاً."</p>
+                            <div class="review-author">
+                                <img src="./images/client-4.jpg" alt="سارة المالكي" class="review-avatar">
+                                <div class="review-author-info">
+                                    <h4 class="review-author-name">سارة المالكي</h4>
+                                    <span class="review-author-role">مؤسسة - دار الأناقة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 5 -->
+                    <div class="review-card">
+                        <div class="review-card-inner">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="review-text">"النظام المحاسبي الذي طوروه لشركتنا وفر علينا ساعات من العمل اليدوي. التقارير الدقيقة وسهولة الاستخدام جعلت إدارة المالية أسهل بكثير."</p>
+                            <div class="review-author">
+                                <img src="./images/client-5.jpg" alt="خالد الزهراني" class="review-avatar">
+                                <div class="review-author-info">
+                                    <h4 class="review-author-name">خالد الزهراني</h4>
+                                    <span class="review-author-role">CFO - مجموعة البناء الحديث</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 6 -->
+                    <div class="review-card">
+                        <div class="review-card-inner">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="review-text">"إدارة حسابات السوشيال ميديا كانت محترفة للغاية. المحتوى الجذاب والتصاميم الإبداعية زادت متابعينا بأكثر من 3 أضعاف في 3 أشهر فقط."</p>
+                            <div class="review-author">
+                                <img src="./images/client-6.jpg" alt="لمى الشمري" class="review-avatar">
+                                <div class="review-author-info">
+                                    <h4 class="review-author-name">لمى الشمري</h4>
+                                    <span class="review-author-role">مديرة - أكاديمية الإبداع</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 7 -->
+                    <div class="review-card">
+                        <div class="review-card-inner">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="review-text">"عملت معهم على حملة إطلاق منتج جديد والنتائج كانت مذهلة. التخطيط الاستراتيجي والتنفيذ المحكم حقق أرقاماً قياسية في المبيعات. شكراً TUX Studio!"</p>
+                            <div class="review-author">
+                                <img src="./images/client-7.jpg" alt="عبدالله الغامدي" class="review-avatar">
+                                <div class="review-author-info">
+                                    <h4 class="review-author-name">عبدالله الغامدي</h4>
+                                    <span class="review-author-role">مدير عام - مصنع الصناعات الغذائية</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 8 -->
+                    <div class="review-card">
+                        <div class="review-card-inner">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="review-text">"الاستشارات التسويقية التي قدموها غيرت مفهومي للتسويق الرقمي. النصائح العملية والاستراتيجية المدروسة ساعدتني في تطوير عملي بشكل كبير."</p>
+                            <div class="review-author">
+                                <img src="./images/client-8.jpg" alt="هدى الشهراني" class="review-avatar">
+                                <div class="review-author-info">
+                                    <h4 class="review-author-name">هدى الشهراني</h4>
+                                    <span class="review-author-role">رائدة أعمال - متجر هدايا يدوية</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider-btn slider-next" id="sliderNext" aria-label="التقييم التالي">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+
+            <!-- Slider Dots -->
+            <div class="slider-dots" id="sliderDots">
+                <button class="slider-dot active" data-index="0" aria-label="التقييم 1"></button>
+                <button class="slider-dot" data-index="1" aria-label="التقييم 2"></button>
+                <button class="slider-dot" data-index="2" aria-label="التقييم 3"></button>
+                <button class="slider-dot" data-index="3" aria-label="التقييم 4"></button>
+                <button class="slider-dot" data-index="4" aria-label="التقييم 5"></button>
+                <button class="slider-dot" data-index="5" aria-label="التقييم 6"></button>
+                <button class="slider-dot" data-index="6" aria-label="التقييم 7"></button>
+                <button class="slider-dot" data-index="7" aria-label="التقييم 8"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== REVIEWS GRID ==================== -->
+    <section class="reviews-grid-section section">
+        <div class="container">
+            <div class="section-header text-center" data-reveal>
+                <span class="section-tag">جميع التقييمات</span>
+                <h2 class="section-title">المزيد من <span class="gradient-text">آراء عملائنا</span></h2>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card-static" data-reveal>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"موقع احترافي وتصميم راقي. الفريق متعاون ويستمع لملاحظاتك بعناية. التسليم كان قبل الموعد المحدد. تجربة رائعة بكل المقاييس."</p>
+                    <div class="review-author">
+                        <img src="./images/client-9.jpg" alt="محمد السهلي" class="review-avatar">
+                        <div class="review-author-info">
+                            <h4 class="review-author-name">محمد السهلي</h4>
+                            <span class="review-author-role">مدير - وكالة السفر الذهبية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card-static" data-reveal>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"التصاميم الإبداعية التي قدموها لحملتنا الإعلانية كانت مؤثرة جداً. نسبة النقر والتفاعل كانت أعلى من المتوسط بكثير. شراكة ناجحة بكل معنى الكلمة."</p>
+                    <div class="review-author">
+                        <img src="./images/client-10.jpg" alt="ريم العتيبي" class="review-avatar">
+                        <div class="review-author-info">
+                            <h4 class="review-author-name">ريم العتيبي</h4>
+                            <span class="review-author-role">مسؤولة تسويق - عيادات الجمال</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card-static" data-reveal>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="review-text">"الدعم الفني الممتاز ما بعد التسليم هو ما يميزهم. أي مشكلة تواجهك يتم حلها فوراً. هذا الالتزام بالعملاء نادر في السوق."</p>
+                    <div class="review-author">
+                        <img src="./images/client-11.jpg" alt="سعد الحربي" class="review-avatar">
+                        <div class="review-author-info">
+                            <h4 class="review-author-name">سعد الحربي</h4>
+                            <span class="review-author-role">IT Manager - شركة اللوجستيات</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card-static" data-reveal>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"الاستشارة التسويقية الأولى كانت مجانية ومفيدة جداً. لم أشعر بأي ضغط للبيع، بل نصحوني بما هو الأفضل لعملي. نزاهة وأمانة في التعامل."</p>
+                    <div class="review-author">
+                        <img src="./images/client-12.jpg" alt="منى الدوسري" class="review-avatar">
+                        <div class="review-author-info">
+                            <h4 class="review-author-name">منى الدوسري</h4>
+                            <span class="review-author-role">صاحبة متجر - قهوتي الخاصة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card-static" data-reveal>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"نظام إدارة المطعم الذي طوروه لنا سهل العمليات بشكل لا يصدق. الطلبات الإلكترونية، إدارة المخزون، والتقارير كلها في مكان واحد."</p>
+                    <div class="review-author">
+                        <img src="./images/client-1.jpg" alt="طارق المطيري" class="review-avatar">
+                        <div class="review-author-info">
+                            <h4 class="review-author-name">طارق المطيري</h4>
+                            <span class="review-author-role">مالك - سلسلة مطاعم البحر</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-card-static" data-reveal>
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"تعامل احترافي من البداية للنهاية. التواصل السلس، الالتزام بالجودة، والتسليم في الوقت المحدد. بالتأكيد سأتعامل معهم مرة أخرى."</p>
+                    <div class="review-author">
+                        <img src="./images/client-3.jpg" alt="جنى القرني" class="review-avatar">
+                        <div class="review-author-info">
+                            <h4 class="review-author-name">جنى القرني</h4>
+                            <span class="review-author-role">مؤسسة - أكاديمية الطفل الذكي</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" data-reveal>
+                <a href="https://wa.me/message/SJIDZYU2V2MTK1?text=مرحباً، أود مشاركة تجربتي معكم" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    شاركنا تجربتك
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA SECTION ==================== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-reveal>
+                <h2 class="cta-title">انضم إلى قائمة عملائنا السعداء</h2>
+                <p class="cta-desc">ابدأ مشروعك اليوم وكن جزءاً من قصص النجاح</p>
+                <a href="https://wa.me/message/SJIDZYU2V2MTK1" class="btn btn-light btn-lg" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    تواصل معنا الآن
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <a href="./index.html" class="footer-logo">
+                        <span class="logo-icon">T</span>
+                        <span class="logo-text">TUX<span class="logo-accent"> Studio</span></span>
+                    </a>
+                    <p class="footer-desc">شريكك الموثوق في التحول الرقمي. نقدم حلولاً متكاملة في تطوير البرمجيات والتسويق الرقمي لنضمن نمو عملك وتميزه.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/message/SJIDZYU2V2MTK1" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="./index.html#home">الرئيسية</a></li>
+                        <li><a href="./index.html#about">من نحن</a></li>
+                        <li><a href="./index.html#services">خدماتنا</a></li>
+                        <li><a href="./index.html#portfolio">أعمالنا</a></li>
+                        <li><a href="./reviews.html">المراجعات</a></li>
+                        <li><a href="./index.html#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">خدماتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="./index.html#services">تطوير مواقع الويب</a></li>
+                        <li><a href="./index.html#services">المنيو الإلكتروني</a></li>
+                        <li><a href="./index.html#services">الأنظمة المحاسبية</a></li>
+                        <li><a href="./index.html#services">تصميم الهوية البصرية</a></li>
+                        <li><a href="./index.html#services">إدارة الإعلانات</a></li>
+                        <li><a href="./index.html#services">إدارة السوشيال ميديا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-title">تواصل معنا</h4>
+                    <ul class="footer-contact-list">
+                        <li><i class="fas fa-phone"></i><a href="tel:+966501234567">01141394250</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:esam888684@gmail.com">esam888684@gmail.com</a></li>
+                        <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/message/SJIDZYU2V2MTK1" target="_blank">واتساب مباشر</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i><span>القاهرة ، مصر</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">جميع الحقوق محفوظة &copy; <span id="currentYear">2026</span> TUX Studio</p>
+                <p class="footer-credit">Created by Osama Esam CEO & Founder for TUX Studio</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== MAIN JAVASCRIPT ==================== -->
+    <script src="./js/script.js"></script>
+</body>
+</html>

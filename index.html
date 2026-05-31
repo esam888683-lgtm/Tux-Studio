@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- ==================== META TAGS ==================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TUX Studio - شركة رائدة في تطوير البرمجيات والتسويق الرقمي. نقدم حلولاً متكاملة من تطوير المواقع والأنظمة إلى التسويق وإدارة المحتوى.">
+    <meta name="keywords" content="تطوير مواقع, تسويق رقمي, هوية بصرية, أنظمة محاسبية, منيو إلكتروني, إدارة إعلانات, سوشيال ميديا">
+    <meta name="author" content="TUX Studio">
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tuxstudio.com">
+    <meta property="og:title" content="TUX Studio | حلول رقمية متكاملة">
+    <meta property="og:description" content="شريكك الموثوق في التحول الرقمي - تطوير برمجيات وتسويق رقمي">
+    <meta property="og:image" content="./assets/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TUX Studio | حلول رقمية متكاملة">
+    <meta name="twitter:description" content="شريكك الموثوق في التحول الرقمي">
+
+    <!-- Title -->
+    <title>TUX Studio | حلول رقمية متكاملة</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+    <!-- Google Fonts: Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- ==================== LOADING SCREEN ==================== -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <svg viewBox="0 0 100 100" class="loading-svg">
+                    <circle cx="50" cy="50" r="45" class="loading-circle loading-circle-bg"/>
+                    <circle cx="50" cy="50" r="45" class="loading-circle loading-circle-progress"/>
+                    <text x="50" y="58" text-anchor="middle" class="loading-text">T</text>
+                </svg>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-bar-fill" id="loadingBarFill"></div>
+            </div>
+            <p class="loading-status" id="loadingStatus">جاري التحميل...</p>
+        </div>
+    </div>
+
+    <!-- ==================== DARK MODE TOGGLE ==================== -->
+    <button class="dark-mode-toggle" id="darkModeToggle" aria-label="تبديل الوضع الليلي">
+        <i class="fas fa-moon" id="darkModeIcon"></i>
+    </button>
+
+    <!-- ==================== BACK TO TOP BUTTON ==================== -->
+    <button class="back-to-top" id="backToTop" aria-label="العودة للأعلى">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ==================== WHATSAPP FLOAT BUTTON ==================== -->
+    <a href="https://wa.me/message/SJIDZYU2V2MTK1" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">T</span>
+                <span class="logo-text">TUX<span class="logo-accent"> Studio</span></span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">الرئيسية</a></li>
+                <li><a href="#about" class="nav-link">من نحن</a></li>
+                <li><a href="#services" class="nav-link">خدماتنا</a></li>
+                <li><a href="#portfolio" class="nav-link">أعمالنا</a></li>
+                <li><a href="./reviews.html" class="nav-link">المراجعات</a></li>
+                <li><a href="#faq" class="nav-link">الأسئلة</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">تواصل معنا</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="فتح القائمة">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-nav-link">الرئيسية</a></li>
+                <li><a href="#about" class="mobile-nav-link">من نحن</a></li>
+                <li><a href="#services" class="mobile-nav-link">خدماتنا</a></li>
+                <li><a href="#portfolio" class="mobile-nav-link">أعمالنا</a></li>
+                <li><a href="./reviews.html" class="mobile-nav-link">المراجعات</a></li>
+                <li><a href="#statistics" class="mobile-nav-link">إحصائياتنا</a></li>
+                <li><a href="#faq" class="mobile-nav-link">الأسئلة الشائعة</a></li>
+                <li><a href="#contact" class="mobile-nav-link mobile-cta">تواصل معنا</a></li>
+            </ul>
+            <div class="mobile-social">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/966501234567" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-particles" id="heroParticles"></div>
+            <div class="hero-gradient"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" data-reveal>
+                    <i class="fas fa-star"></i>
+                    <span>شركة رائدة في التحول الرقمي</span>
+                </div>
+                <h1 class="hero-title" data-reveal>
+                    نحول أفكارك إلى<br>
+                    <span class="gradient-text">حلول رقمية</span> متكاملة
+                </h1>
+                <p class="hero-description" data-reveal>
+                    في TUX Studio، نجمع بين الإبداع التقني والاستراتيجية التسويقية لنقدم لك تجربة رقمية فريدة. 
+                    من تطوير البرمجيات المتقدمة إلى إدارة الحملات الإعلانية، نحن شريكك الموثوق في رحلة النمو الرقمي.
+                </p>
+                <div class="hero-buttons" data-reveal>
+                    <a href="https://wa.me/message/SJIDZYU2V2MTK1" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        اطلب خدمتك الآن
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fas fa-envelope"></i>
+                        تواصل معنا
+                    </a>
+                </div>
+                <div class="hero-stats" data-reveal>
+                    <div class="hero-stat-item">
+                        <span class="hero-stat-number">+150</span>
+                        <span class="hero-stat-label">مشروع منجز</span>
+                    </div>
+                    <div class="hero-stat-item">
+                        <span class="hero-stat-number">+80</span>
+                        <span class="hero-stat-label">عميل سعيد</span>
+                    </div>
+                    <div class="hero-stat-item">
+                        <span class="hero-stat-number">5+</span>
+                        <span class="hero-stat-label">سنوات خبرة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <div class="scroll-mouse">
+                    <div class="scroll-wheel"></div>
+                </div>
+                <span>اسحب للأسفل</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image" data-reveal>
+                    <div class="about-image-wrapper">
+                        <img src="./images/about-team.png" alt="فريق TUX Studio" loading="lazy">
+                        <div class="about-image-badge">
+                            <span class="badge-number">5+</span>
+                            <span class="badge-text">سنوات من<br>التميز</span>
+                        </div>
+                        <div class="about-image-decoration"></div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="section-header" data-reveal>
+                        <span class="section-tag">من نحن</span>
+                        <h2 class="section-title">شريكك الموثوق في<br><span class="gradient-text">التحول الرقمي</span></h2>
+                    </div>
+                    <p class="about-text" data-reveal>
+                        TUX Studio هي شركة مصريه رائدة متخصصة في تقديم حلول رقمية متكاملة تجمع بين التقنية المتقدمة والاستراتيجية التسويقية الفعالة. نؤمن بأن كل عمل تجاري يستحق وجوداً رقمياً مميزاً يعكس قيمه ويطور أداءه.
+                    </p>
+                    <p class="about-text" data-reveal>
+                        بدأنا رحلتنا عام 2021 بهدف تمكين الشركات والأفراد من تحقيق أقصى إمكاناتهم في العالم الرقمي، ونمونا لنصبح واحدة من أكثر الشركات الموثوقة في مجال التقنية والتسويق.
+                    </p>
+
+                    <!-- Vision & Mission -->
+                    <div class="about-cards">
+                        <div class="about-card" data-reveal>
+                            <div class="about-card-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="about-card-title">رؤيتنا</h3>
+                            <p class="about-card-text">أن نكون الشريك الرقمي الأول للشركات في مصر ونصنع الفارق في كل مشروع.</p>
+                        </div>
+                        <div class="about-card" data-reveal>
+                            <div class="about-card-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3 class="about-card-title">رسالتنا</h3>
+                            <p class="about-card-text">تقديم حلول رقمية مبتكرة وخدمات تسويقية فعالة تساعد عملائنا على النمو والتميز في بيئة الأعمال الرقمية.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-values" data-reveal>
+                        <h3 class="values-title">قيمنا الأساسية</h3>
+                        <div class="values-grid">
+                            <div class="value-item">
+                                <i class="fas fa-gem"></i>
+                                <span>الجودة</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>الإبداع</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>الشفافية</span>
+                            </div>
+                            <div class="value-item">
+                                <i class="fas fa-rocket"></i>
+                                <span>الابتكار</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section class="services section section-alt" id="services">
+        <div class="container">
+            <div class="section-header text-center" data-reveal>
+                <span class="section-tag">خدماتنا</span>
+                <h2 class="section-title">حلول رقمية <span class="gradient-text">متكاملة</span></h2>
+                <p class="section-subtitle">نقدم مجموعة واسعة من الخدمات الرقمية المصممة خصيصاً لتلبية احتياجات عملك</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1: Web Development -->
+                <div class="service-card" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="service-title">تطوير مواقع الويب</h3>
+                        <p class="service-description">تصميم وتطوير مواقع احترافية متجاوبة مع أحدث التقنيات، مع التركيز على تجربة المستخدم وسرعة الأداء.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i>تصميم مخصص فريد</li>
+                            <li><i class="fas fa-check"></i>متجاوب مع جميع الأجهزة</li>
+                            <li><i class="fas fa-check"></i>تحسين محركات البحث</li>
+                            <li><i class="fas fa-check"></i>أداء عالي وسرعة فائقة</li>
+                        </ul>
+                        <a href="https://wa.me/message/SJIDZYU2V2MTK1?text=مرحباً، أرغب في الاستفسار عن خدمة تطوير مواقع الويب" class="service-link" target="_blank">
+                            اطلب الخدمة <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Digital Menu -->
+                <div class="service-card" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3 class="service-title">المنيو الإلكتروني</h3>
+                        <p class="service-description">حلول رقمية متكاملة للمطاعم والكافيهات تشمل المنيو الإلكتروني QR، ونظام الطلبات، وإدارة المخزون.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i>منيو QR تفاعلي</li>
+                            <li><i class="fas fa-check"></i>نظام طلبات ذكي</li>
+                            <li><i class="fas fa-check"></i>إدارة المخزون</li>
+                            <li><i class="fas fa-check"></i>تقارير وتحليلات</li>
+                        </ul>
+                        <a href="https://wa.me/message/SJIDZYU2V2MTK1?text=مرحباً، أرغب في الاستفسار عن خدمة المنيو الإلكتروني" class="service-link" target="_blank">
+                            اطلب الخدمة <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Accounting Systems -->
+                <div class="service-card" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3 class="service-title">الأنظمة المحاسبية</h3>
+                        <p class="service-description">أنظمة محاسبية متكاملة مصممة خصيصاً للشركات السعودية مع دعم الفاتورة الإلكترونية ومتطلبات هيئة الزكاة.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i>فواتير إلكترونية</li>
+                            <li><i class="fas fa-check"></i>إدارة المخزون والمستودعات</li>
+                            <li><i class="fas fa-check"></i>تقارير مالية تفصيلية</li>
+                            <li><i class="fas fa-check"></i>توافق مع هيئة الزكاة</li>
+                        </ul>
+                        <a href="https://wa.me/message/SJIDZYU2V2MTK1?text=مرحباً، أرغب في الاستفسار عن خدمة الأنظمة المحاسبية" class="service-link" target="_blank">
+                            اطلب الخدمة <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Visual Identity -->
+                <div class="service-card" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="service-title">تصميم الهوية البصرية</h3>
+                        <p class="service-description">تصاميم احترافية تعكس شخصية علامتك التجارية من الشعار إلى الباقة الكاملة للهوية البصرية.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i>تصميم الشعار</li>
+                            <li><i class="fas fa-check"></i>الباقة البصرية الكاملة</li>
+                            <li><i class="fas fa-check"></i>تصاميم الطباعة</li>
+                            <li><i class="fas fa-check"></i>دليل الاستخدام</li>
+                        </ul>
+                        <a href="https://wa.me/message/SJIDZYU2V2MTK1?text=مرحباً، أرغب في الاستفسار عن خدمة تصميم الهوية البصرية" class="service-link" target="_blank">
+                            اطلب الخدمة <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5: Ad Management -->
+                <div class="service-card" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3 class="service-title">إدارة الإعلانات الممولة</h3>
+                        <p class="service-description">إدارة احترافية للحملات الإعلانية على جميع المنصات باستراتيجيات مدروسة لتحقيق أقصى عائد على الاستثمار.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i>إعلانات Google</li>
+                            <li><i class="fas fa-check"></i>إعلانات Meta</li>
+                            <li><i class="fas fa-check"></i>إعلانات Snapchat & TikTok</li>
+                            <li><i class="fas fa-check"></i>تحليل وتحسين مستمر</li>
+                        </ul>
+                        <a href="https://wa.me/message/SJIDZYU2V2MTK1?text=مرحباً، أرغب في الاستفسار عن خدمة إدارة الإعلانات الممولة" class="service-link" target="_blank">
+                            اطلب الخدمة <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6: Social Media -->
+                <div class="service-card" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-share-nodes"></i>
+                        </div>
+                        <h3 class="service-title">إدارة السوشيال ميديا</h3>
+                        <p class="service-description">إدارة شاملة لحسابات التواصل الاجتماعي تشمل صناعة المحتوى، التصميم، الجدولة، والتفاعل مع الجمهور.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i>صناعة محتوى احترافي</li>
+                            <li><i class="fas fa-check"></i>تصميمات جذابة</li>
+                            <li><i class="fas fa-check"></i>جدولة ونشر</li>
+                            <li><i class="fas fa-check"></i>تقارير الأداء</li>
+                        </ul>
+                        <a href="https://wa.me/message/SJIDZYU2V2MTK1?text=مرحباً، أرغب في الاستفسار عن خدمة إدارة السوشيال ميديا" class="service-link" target="_blank">
+                            اطلب الخدمة <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 7: Marketing Consulting -->
+                <div class="service-card" data-reveal>
+                    <div class="service-card-inner">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="service-title">الاستشارات التسويقية</h3>
+                        <p class="service-description">استشارات استراتيجية شاملة لبناء خطة تسويقية متكاملة تضمن نمو علامتك التجارية وزيادة مبيعاتك.</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i>تحليل السوق والمنافسين</li>
+                            <li><i class="fas fa-check"></i>خطة تسويقية متكاملة</li>
+                            <li><i class="fas fa-check"></i>استراتيجية المحتوى</li>
+                            <li><i class="fas fa-check"></i>متابعة وتقييم</li>
+                        </ul>
+                        <a href="https://wa.me/message/SJIDZYU2V2MTK1?text=مرحباً، أرغب في الاستفسار عن خدمة الاستشارات التسويقية" class="service-link" target="_blank">
+                            اطلب الخدمة <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US SECTION ==================== -->
+    <section class="why-us section" id="why-us">
+        <div class="container">
+            <div class="why-us-grid">
+                <div class="why-us-content">
+                    <div class="section-header" data-reveal>
+                        <span class="section-tag">لماذا نحن</span>
+                        <h2 class="section-title">أسباب تجعلنا<br><span class="gradient-text">خيارك الأفضل</span></h2>
+                    </div>
+                    <p class="why-us-text" data-reveal>
+                        نفخر بتقديم خدمات استثنائية تجمع بين الخبرة العميقة والشغف بالابتكار. نعمل كشريك حقيقي لنجاحك، لا كمقدم خدمة فقط.
+                    </p>
+
+                    <div class="features-list">
+                        <div class="feature-item" data-reveal>
+                            <div class="feature-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>جودة تنفيذ عالية</h3>
+                                <p>نلتزم بأعلى معايير الجودة في كل مشروع، مع مراجعة دقيقة واختبار شامل قبل التسليم.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item" data-reveal>
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>سرعة في التسليم</h3>
+                                <p>نحترم الوقت ونلتزم بالمواعيد المحددة دون المساس بجودة العمل، مع تحديثات دورية طوال فترة التنفيذ.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item" data-reveal>
+                            <div class="feature-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>دعم فني ممتاز</h3>
+                                <p>فريق دعم متخصص جاهز لمساعدتك على مدار الساعة، مع ضمان صيانة ودعم بعد التسليم.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item" data-reveal>
+                            <div class="feature-icon">
+                                <i class="fas fa-tags"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>أسعار تنافسية</h3>
+                                <p>نقدم أفضل قيمة مقابل السعر مع باقات مرنة تناسب مختلف الميزانيات دون hidden costs.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item" data-reveal>
+                            <div class="feature-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>حلول مخصصة</h3>
+                                <p>كل مشروع فريد بالنسبة لنا. نصمم حلولاً مخصصة تلبي احتياجاتك بدقة وتتناسب مع أهداف عملك.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="why-us-image" data-reveal>
+                    <div class="why-us-image-wrapper">
+                        <img src="./images/why-us.jpg" alt="لماذا TUX Studio" loading="lazy">
+                        <div class="floating-card floating-card-1">
+                            <i class="fas fa-check-circle"></i>
+                            <span>جودة مضمونة</span>
+                        </div>
+                        <div class="floating-card floating-card-2">
+                            <i class="fas fa-clock"></i>
+                            <span>التزام بالمواعيد</span>
+                        </div>
+                        <div class="floating-card floating-card-3">
+                            <i class="fas fa-heart"></i>
+                            <span>رضا العملاء</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PORTFOLIO SECTION ==================== -->
+    <section class="portfolio section section-alt" id="portfolio">
+        <div class="container">
+            <div class="section-header text-center" data-reveal>
+                <span class="section-tag">أعمالنا</span>
+                <h2 class="section-title">معرض <span class="gradient-text">مشاريعنا</span></h2>
+                <p class="section-subtitle">نفخر بأعمالنا التي تعكس جودتنا وإبداعنا في كل تفصيل</p>
+            </div>
+
+            <!-- Portfolio Filter -->
+            <div class="portfolio-filter" data-reveal>
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="web">تطوير ويب</button>
+                <button class="filter-btn" data-filter="branding">هوية بصرية</button>
+                <button class="filter-btn" data-filter="marketing">تسويق رقمي</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item" data-category="web" data-reveal>
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="./images/portfolio-1.jpg" alt="منصة التجارة الإلكترونية" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-btn" aria-label="مشاهدة المشروع">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-btn" aria-label="تفاصيل المشروع">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">تطوير ويب</span>
+                            <h3 class="portfolio-title">منصة التجارة الإلكترونية</h3>
+                            <p class="portfolio-description">منصة متكاملة للبيع الإلكتروني مع نظام إدارة مخزون وبوابات دفع متعددة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item" data-category="branding" data-reveal>
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="./images/portfolio-2.jpg" alt="هوية مقهى أرابيكا" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-btn" aria-label="مشاهدة المشروع">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-btn" aria-label="تفاصيل المشروع">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">هوية بصرية</span>
+                            <h3 class="portfolio-title">هوية مقهى أرابيكا</h3>
+                            <p class="portfolio-description">تصميم هوية بصرية كاملة لمقهى متخصص تشمل الشعار والمنيو والتغليف</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item" data-category="marketing" data-reveal>
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="./images/portfolio-3.jpg" alt="حملة تسويقية ناجحة" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-btn" aria-label="مشاهدة المشروع">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-btn" aria-label="تفاصيل المشروع">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">تسويق رقمي</span>
+                            <h3 class="portfolio-title">حملة إطلاق منتج</h3>
+                            <p class="portfolio-description">إدارة حملة إعلانية متكاملة على 4 منصات حققت 300% زيادة في المبيعات</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item" data-category="web" data-reveal>
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="./images/portfolio-4.jpg" alt="نظام إدارة المطاعم" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-btn" aria-label="مشاهدة المشروع">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-btn" aria-label="تفاصيل المشروع">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">تطوير ويب</span>
+                            <h3 class="portfolio-title">نظام إدارة المطاعم</h3>
+                            <p class="portfolio-description">منيو إلكتروني QR متكامل مع نظام طلبات وإدارة مخزون ومبيعات</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item" data-category="branding" data-reveal>
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="./images/portfolio-5.jpg" alt="هوية شركة تكنولوجيا" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-btn" aria-label="مشاهدة المشروع">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-btn" aria-label="تفاصيل المشروع">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">هوية بصرية</span>
+                            <h3 class="portfolio-title">هوية شركة نكست تك</h3>
+                            <p class="portfolio-description">تصميم هوية بصرية حديثة لشركة تكنولوجيا ناشئة تشمل الشعار والموقع</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item" data-category="marketing" data-reveal>
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="./images/portfolio-6.jpg" alt="إدارة حسابات سوشيال ميديا" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-actions">
+                                    <a href="#" class="portfolio-btn" aria-label="مشاهدة المشروع">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="portfolio-btn" aria-label="تفاصيل المشروع">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">تسويق رقمي</span>
+                            <h3 class="portfolio-title">إدارة محتوى تجاري</h3>
+                            <p class="portfolio-description">إدارة شاملة لحسابات التواصل لسلسلة متاجر حققت زيادة 500% في التفاعل</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Button -->
+            <div class="text-center" data-reveal>
+                <a href="https://wa.me/message/SJIDZYU2V2MTK1?text=مرحباً، أرغب في معرفة المزيد عن أعمالكم" class="btn btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    استفسر عن مشروعك
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== STATISTICS SECTION ==================== -->
+    <section class="statistics section" id="statistics">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-reveal>
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-number">
+                        <span class="counter" data-target="150">0</span>+
+                    </div>
+                    <div class="stat-label">مشروع منجز</div>
+                </div>
+
+                <div class="stat-item" data-reveal>
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number">
+                        <span class="counter" data-target="80">0</span>+
+                    </div>
+                    <div class="stat-label">عميل سعيد</div>
+                </div>
+
+                <div class="stat-item" data-reveal>
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="stat-number">
+                        <span class="counter" data-target="5">0</span>+
+                    </div>
+                    <div class="stat-label">سنوات خبرة</div>
+                </div>
+
+                <div class="stat-item" data-reveal>
+                    <div class="stat-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="stat-number">
+                        <span class="counter" data-target="98">0</span>%
+                    </div>
+                    <div class="stat-label">نسبة رضا العملاء</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ SECTION ==================== -->
+    <section class="faq section section-alt" id="faq">
+        <div class="container">
+            <div class="section-header text-center" data-reveal>
+                <span class="section-tag">الأسئلة الشائعة</span>
+                <h2 class="section-title">كل ما تود <span class="gradient-text">معرفته</span></h2>
+                <p class="section-subtitle">إليك الإجابات على أكثر الأسئلة شيوعاً</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-column">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item" data-reveal>
+                        <button class="faq-question">
+                            <span>كم تستغرق مدة تنفيذ المشروع؟</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>مدة التنفيذ تختلف حسب حجم وتعقيد المشروع. عادةً ما تستغرق مواقع الويب من 2 إلى 6 أسابيع، بينما المشاريع الأكبر قد تستغرق 2-3 أشهر. نقدم جدولاً زمنياً مفصلاً قبل بدء العمل ونلتزم به.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item" data-reveal>
+                        <button class="faq-question">
+                            <span>هل تقدمون دعم فني بعد التسليم؟</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>نعم، نقدم ضمان شامل لمدة 3 أشهر على جميع مشاريعنا تشمل إصلاح أي أخطاء برمجية مجاناً. كما نوفر باقات صيانة شهرية لمن يرغب في دعم مستمر وتحديثات دورية.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item" data-reveal>
+                        <button class="faq-question">
+                            <span>كيف يتم التواصل طوال فترة المشروع؟</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>نوفر قناة تواصل مباشرة مع مدير المشروع الخاص بك عبر واتساب أو Slack. كما نحدثك بشكل أسبوعي عن تقدم العمل ونعقد اجتماعات مراجعة في مراحل Milestones الرئيسية.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item" data-reveal>
+                        <button class="faq-question">
+                            <span>هل يمكنني طلب تعديلات على التصميم؟</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>بالتأكيد! نقدم 3 جولات تعديلات مجانية على التصميم لتضمن رضاك التام. نبدأ ب wireframe ثم mockup قبل التنفيذ النهائي لنضمن توافق الرؤية من البداية.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-column">
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item" data-reveal>
+                        <button class="faq-question">
+                            <span>ما هي طرق الدفع المتاحة؟</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>نقبل التحويل البنكي، مدى، Apple Pay، وبطاقات الائتمان. عادةً يتم تقسيم الدفع على دفعات: 50% عند الاتفاق، 25% عند المرحلة النصفية، و25% عند التسليم النهائي.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="faq-item" data-reveal>
+                        <button class="faq-question">
+                            <span>هل تقدمون خدمات الاستضافة والدومين؟</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>نعم، نوفر خدمات استضافة آمنة وعالية الأداء على خوادم سحابية موثوقة. كما نساعدك في حجز الدومين وإعداده. يمكنك أيضاً استضافة الموقع على استضافتك الخاصة إن أردت.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 7 -->
+                    <div class="faq-item" data-reveal>
+                        <button class="faq-question">
+                            <span>هل يمكن ربط الموقع مع أنظمة أخرى؟</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>نعم، نحن متخصصون في ربط المواقع والأنظمة مع مختلف المنصات مثل Zapier، CRMs، بوابات الدفع، أنظمة المحاسبة، ومنصات التواصل الاجتماعي. نصمم APIs مخصصة حسب احتياجك.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 8 -->
+                    <div class="faq-item" data-reveal>
+                        <button class="faq-question">
+                            <span>كيف أبدأ مشروعي معكم؟</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-content">
+                                <p>ببساطة تواصل معنا عبر واتساب أو نموذج التواصل، وسيقوم فريقنا بتحديد موعد استشارة مجانية خلال 24 ساعة. سنناقش احتياجاتك ونقدم لك عرضاً مفصلاً مناسباً لميزانيتك.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="section-header text-center" data-reveal>
+                <span class="section-tag">تواصل معنا</span>
+                <h2 class="section-title">ابدأ مشروعك <span class="gradient-text">اليوم</span></h2>
+                <p class="section-subtitle">نحن هنا لمساعدتك في تحقيق أهدافك الرقمية. تواصل معنا الآن</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info" data-reveal>
+                    <h3 class="contact-info-title">معلومات التواصل</h3>
+
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>واتساب</h4>
+                                <a href="https://wa.me/message/SJIDZYU2V2MTK1" target="_blank">01141394250</a>
+                                <br>
+                                <a href="https://wa.me/message/SJIDZYU2V2MTK1" target="_blank">01214518618</a>
+                                <span>متاح 24/7 للرد السريع</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>هاتف</h4>
+                                <a href="tel:+966501234567">01214518615</a>
+                                <span>من الأحد إلى الخميس، 9 ص - 6 م</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>بريد إلكتروني</h4>
+                                <a href="mailto:info@tuxstudio.com">esam888684@gmail.com</a>
+                                <span>نرد خلال 24 ساعة</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <h4>الموقع</h4>
+                                <p>القاهرة ، مصر</p>
+                                <span>نخدم عملاء في جميع أنحاء العالم</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <h4>تابعنا على</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter / X">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Behance">
+                                <i class="fab fa-behance"></i>
+                            </a>
+                            <a href="https://wa.me/966501234567" class="social-link" aria-label="WhatsApp" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-reveal>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-header">
+                            <h3>أرسل رسالتك</h3>
+                            <p>املأ النموذج وسنرد عليك في أسرع وقت</p>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">الاسم الكامل *</label>
+                                <input type="text" id="name" name="name" required placeholder="محمد أحمد">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">رقم الجوال *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="05xxxxxxxx">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" placeholder="example@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">الخدمة المطلوبة</label>
+                            <select id="service" name="service">
+                                <option value="">اختر الخدمة...</option>
+                                <option value="web">تطوير موقع ويب</option>
+                                <option value="menu">المنيو الإلكتروني</option>
+                                <option value="accounting">نظام محاسبي</option>
+                                <option value="branding">تصميم هوية بصرية</option>
+                                <option value="ads">إدارة إعلانات ممولة</option>
+                                <option value="social">إدارة سوشيال ميديا</option>
+                                <option value="consulting">استشارات تسويقية</option>
+                                <option value="other">أخرى</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">تفاصيل المشروع *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="صف لنا مشروعك والمتطلبات الخاصة به..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال الرسالة
+                        </button>
+
+                        <!-- Alternative WhatsApp CTA -->
+                        <div class="form-whatsapp-alt">
+                            <span>أو تواصل مباشرة عبر</span>
+                            <a href="https://wa.me/message/SJIDZYU2V2MTK1" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                واتساب
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Company Info -->
+                <div class="footer-col footer-about">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-icon">T</span>
+                        <span class="logo-text">TUX<span class="logo-accent"> Studio</span></span>
+                    </a>
+                    <p class="footer-desc">
+                        شريكك الموثوق في التحول الرقمي. نقدم حلولاً متكاملة في تطوير البرمجيات والتسويق الرقمي لنضمن نمو عملك وتميزه.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/message/SJIDZYU2V2MTK1" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-title">روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#portfolio">أعمالنا</a></li>
+                        <li><a href="./reviews.html">المراجعات</a></li>
+                        <li><a href="#contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-col">
+                    <h4 class="footer-title">خدماتنا</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">تطوير مواقع الويب</a></li>
+                        <li><a href="#services">المنيو الإلكتروني</a></li>
+                        <li><a href="#services">الأنظمة المحاسبية</a></li>
+                        <li><a href="#services">تصميم الهوية البصرية</a></li>
+                        <li><a href="#services">إدارة الإعلانات</a></li>
+                        <li><a href="#services">إدارة السوشيال ميديا</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-col">
+                    <h4 class="footer-title">تواصل معنا</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+966501234567">01141394250</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@tuxstudio.com">esam888684@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/message/SJIDZYU2V2MTK1" target="_blank">واتساب مباشر</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>القاهرة ، مصر</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">
+                    جميع الحقوق محفوظة &copy; <span id="currentYear">2026</span> TUX Studio
+                </p>
+                <p class="footer-credit">Created by Osama Esam CEO & Founder for TUX Studio</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== MAIN JAVASCRIPT ==================== -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
